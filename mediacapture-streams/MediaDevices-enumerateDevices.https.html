@@ -34,6 +34,9 @@ promise_test(function() {
         if (mediainfo.kind == "audioinput") {
           assert_equals(typeof capabilities.echoCancellation, "object", "echoCancellation must be an object.");
         }
+        if (mediainfo.kind == "videoinput") {
+          assert_equals(typeof capabilities.facingMode, "object", "facingMode must be an object.");
+        }
       } else if ( mediainfo.kind == "audiooutput" ) {
         assert_true(mediainfo instanceof MediaDeviceInfo);
       } else {
