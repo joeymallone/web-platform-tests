@@ -31,6 +31,7 @@ function performChromiumSetup() {
     prefix = `${root}/external/wpt/resources/chromium`;
     extra = [
       `${root}/resources/bluetooth/bluetooth-fake-adapter.js`,
+      'file:///gen/content/shell/common/layout_test/fake_bluetooth_chooser.mojom.js',
     ];
   } else if (window.location.pathname.startsWith('/bluetooth/https/')) {
     extra = [
